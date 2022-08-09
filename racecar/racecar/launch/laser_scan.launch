@@ -1,0 +1,18 @@
+<!-- -*- mode: XML -*- -->
+<launch>
+  
+  <!-- F1TENTH LIDAR Node -->
+  <node name="hokuyo_lidar" pkg="urg_node" type="urg_node" output="screen">
+    <param name="ip_address" value="192.168.0.10"/>
+    <param name="frame_id" value="laser"/>
+    <param name="calibrate_time" value="true"/>
+    <param name="publish_intensity" value="false"/>
+    <param name="publish_multiecho" value="false"/>
+    <param name="angle_min" value="-2.35619"/>
+    <param name="angle_max" value="2.35619"/>
+  </node>
+ 
+  <!-- RViz Node -->
+  <node name="rviz" pkg="rviz" type="rviz" respawn="false" output="screen" args="-d $(find racecar)/rviz/laser_scan.rviz"/>
+
+</launch>

@@ -1,0 +1,13 @@
+rostopic hz </topic/name>
+
+ORIGINAL:
+---------
+/usb_cam/image_raw			Freq: 15.04 Hz
+/vesc/commands/motor/speed		Freq: 153.8 Hz
+/vesc/commands/servo/position		Freq: 75.00 Hz
+
+THROTTLED:
+----------
+/camera_throttled			Freq: 10 Hz (Configurable through data_recording.launch file)
+/drive_throttled			Freq: 10 Hz (Configurable through data_recording.launch file)
+/steer_throttled			Freq: 10 Hz (Configurable through data_recording.launch file)

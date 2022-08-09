@@ -1,0 +1,23 @@
+Prerequisites:
+--------------
+- A bag file with an image topic recorded inside it
+- MJPEG Tools [Ubuntu: sudo apt-get install mjpegtools]
+- ffmpeg      [Ubuntu: sudo apt-get install ffmpeg]
+
+
+Procedure:
+----------
+1. Start ROS master using the following command:
+   roscore
+   
+2. Create a directory for the extracted images, cd in there and execute:
+   rosrun image_view extract_images _sec_per_frame:=0.01 image:=</IMAGE/TOPIC/IN/BAGFILE>
+   
+3. Open a new terminal window, cd to the bag file path and execute:
+   rosbag play <BAGFILE>
+   
+Notes:
+------
+- A sequence of image frames will be created in the directory using the naming style pattern: frame%04d.jpg
+- Check if the number of frames created is the same as the number of messages in the bag file using rosbag info command.
+- If the number of frames is less than number of image messages, decrease the _sec_per_frame value in step 2 of the procedure.

@@ -1,0 +1,33 @@
+<!-- -*- mode: XML -*- -->
+<launch>
+
+  <arg name="racecar_version" default="racecar-v2" />
+  <arg name="run_camera" default="false"/>
+  <arg name="rosbag_dir" default="$(find racecar)/rosbag"/>
+  
+  <!-- F1TENTH Teleop Node -->
+  <include file="$(find racecar)/launch/includes/$(arg racecar_version)-teleop.launch.xml">
+    <arg name="racecar_version" value="$(arg racecar_version)" />
+    <arg name="run_camera" value="$(arg run_camera)" />
+  </include>
+
+  <!-- F1TENTH Camera Node -->
+  <node name="usb_cam" pkg="usb_cam" type="usb_cam_node" output="screen" >
+    <param name="video_device" value="/dev/video0" />
+    <param name="image_width" value="640" />
+    <param name="image_height" value="480" />
+    <param name="pixel_format" value="yuyv" />
+    <param name="camera_frame_id" value="usb_cam" />
+    <param name="io_method" value="mmap"/>
+  </node>
+  
+  <!-- Throttle Nodes -->
+  <!-- To match the frequency of different topics to be recorded (i.e. recording synchronously) -->
+  <node name="camera_throttler" type="throttle" pkg="topic_tools" args="messages /usb_cam/image_raw 10 /camera_throttled" />
+  <node name="drive_throttler" type="throttle" pkg="topic_tools" args="messages /vesc/commands/motor/speed 10 /drive_throttled" />
+  <node name="steer_throttler" type="throttle" pkg="topic_tools" args="messages /vesc/commands/servo/position 10 /steer_throttled" />
+  
+  <!-- ROS Bag Node -->
+  <node name="data_recorder" pkg="rosbag" type="record" args="record -o $(arg rosbag_dir)/f1tenth /camera_throttled /drive_throttled /steer_throttled" />
+
+</launch>
