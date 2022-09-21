@@ -2,7 +2,7 @@
 
 ### Simultaneous Localization and Mapping (Fall 2022)
 
-| ![1](https://github.com/Tinker-Twins/F1TENTH/blob/main/media/Fall%202022/Lab%20Setup.jpg)|![2](https://github.com/Tinker-Twins/F1TENTH/blob/main/media/Fall%202022/SLAM.jpg)|![3](https://github.com/Tinker-Twins/F1TENTH/blob/main/media/Summer%202022/Camera%20Mount.jpg)|
+| ![1](https://github.com/Tinker-Twins/F1TENTH/blob/main/media/Fall%202022/Lab%20Setup.jpg)|![2](https://github.com/Tinker-Twins/F1TENTH/blob/main/media/Fall%202022/SLAM.jpg)|![3](https://github.com/Tinker-Twins/F1TENTH/blob/main/media/Fall%202022/Map.png)|
 | :-----------------: | :-----------------: | :-----------------: |
 
 ### Indoor and Outdoor Datasets for Soiled/Un-Soiled Camera Lens (Summer 2022)
