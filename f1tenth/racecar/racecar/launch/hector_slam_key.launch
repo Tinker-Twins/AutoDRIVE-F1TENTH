@@ -4,16 +4,11 @@
   <!-- Global Parameter -->
   <param name="/use_sim_time" value="false"/>
 
-  <!-- F1TENTH Teleop Node -->
-  <arg name="racecar_version" default="racecar-v2" />
-  <arg name="run_camera" default="false"/>
-  <include file="$(find racecar)/launch/includes/$(arg racecar_version)-teleop.launch.xml">
-    <arg name="racecar_version" value="$(arg racecar_version)" />
-    <arg name="run_camera" value="$(arg run_camera)" />
-  </include>
+  <!-- F1TENTH Teleop Keyboard Node -->
+  <include file="$(find racecar)/launch/teleop_key.launch"/>
   
   <!-- F1TENTH LIDAR Node -->
-  <node name="hokuyo_lidar" pkg="urg_node" type="urg_node" output="screen">
+  <node name="hokuyo_lidar" pkg="urg_node" type="urg_node">
     <param name="ip_address" value="192.168.0.10"/>
     <param name="frame_id" value="laser"/>
     <param name="calibrate_time" value="true"/>
@@ -30,7 +25,7 @@
   <arg name="pub_map_odom_transform" default="true"/>
   <arg name="scan_subscriber_queue_size" default="5"/>
   <arg name="scan_topic" default="scan"/>
-  <arg name="map_size" default="2048"/>
+  <arg name="map_size" default="256"/>
 
   <!-- Static transform between base frame and laser frame -->
   <node pkg="tf" type="static_transform_publisher" name="map_nav_broadcaster" args="0 0 0 0 0 0 base laser 100"/>
@@ -90,6 +85,6 @@
   </node>
  
   <!-- RViz Node -->
-  <node name="rviz" pkg="rviz" type="rviz" respawn="false" output="screen" args="-d $(find racecar)/rviz/hector_slam.rviz"/>
+  <!--node name="rviz" pkg="rviz" type="rviz" respawn="false" output="screen" args="-d $(find racecar)/rviz/hector_slam.rviz"/-->
 
 </launch>

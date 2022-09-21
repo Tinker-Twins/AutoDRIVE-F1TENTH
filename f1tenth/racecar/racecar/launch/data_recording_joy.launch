@@ -5,7 +5,7 @@
   <arg name="run_camera" default="false"/>
   <arg name="rosbag_dir" default="$(find racecar)/rosbag"/>
   
-  <!-- F1TENTH Teleop Node -->
+  <!-- F1TENTH Teleop Joystick Node -->
   <include file="$(find racecar)/launch/includes/$(arg racecar_version)-teleop.launch.xml">
     <arg name="racecar_version" value="$(arg racecar_version)" />
     <arg name="run_camera" value="$(arg run_camera)" />
