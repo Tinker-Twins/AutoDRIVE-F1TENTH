@@ -1,5 +1,10 @@
 # F1TENTH
 
+### Simultaneous Localization and Mapping (Fall 2022)
+
+| ![1](https://github.com/Tinker-Twins/F1TENTH/blob/main/media/Fall%202022/Lab%20Setup.jpg)|![2](https://github.com/Tinker-Twins/F1TENTH/blob/main/media/Fall%202022/SLAM.jpg)|![3](https://github.com/Tinker-Twins/F1TENTH/blob/main/media/Summer%202022/Camera%20Mount.jpg)|
+| :-----------------: | :-----------------: | :-----------------: |
+
 ### Indoor and Outdoor Datasets for Soiled/Un-Soiled Camera Lens (Summer 2022)
 
 [GitHub](https://github.com/Tinker-Twins/F1TENTH-Webcam-Data-Recording-Pipeline)
