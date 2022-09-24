@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <!-- Global Parameter -->
+  <param name="/use_sim_time" value="false"/>
+
+  <!-- F1TENTH Bringup -->
+  <arg name="racecar_version" default="racecar-v2" />
+  <arg name="run_camera" default="false"/>
+  <group ns="vesc">
+    <!-- Spawn MUXs -->
+    <include file="$(find racecar)/launch/mux.launch" />
+    <!-- VESC Driver -->
+    <include file="$(find racecar)/launch/includes/$(arg racecar_version)/vesc.launch.xml" >
+      <arg name="racecar_version" value="$(arg racecar_version)" />
+    </include>
+  </group>
+
+  <!-- Start LIDAR -->
+  <include file="$(find racecar)/launch/includes/common/sensors.launch.xml" >
+    <arg name="racecar_version" value="$(arg racecar_version)" />
+  </include>
+
+  <!-- Static Transforms -->
+  <include file="$(find racecar)/launch/includes/$(arg racecar_version)/static_transforms.launch.xml" />
+
+  <!-- Map -->
+  <arg name="map_file" value="$(find racecar)/maps/f1tenth_armlab_circuit_2022_09_20.yaml"/>
+  <node pkg="map_server" type="map_server" name="map_server" args="$(arg map_file)">
+    <param name="frame_id" value="map"/>
+  </node>
+
+  <!-- Odometer -->
+  <node pkg="autodrive" type="lidar_odometer" name="autodrive_odometer">
+    <param name="laser_scan_topic" value="/scan"/>     # topic where the lidar scans are being published
+    <param name="odom_topic" value="/odom"/>           # topic where to publish the odometry estimations
+    <param name="publish_tf" value="true"/>            # whether or not to publish the tf::transform (base_frame->odom_frame)
+    <param name="base_frame_id" value="/base_link"/>   # frame_id (tf) of the mobile base
+    <param name="odom_frame_id" value="/odom"/>        # frame_id (tf) to publish the odometry estimations
+    <param name="init_pose_from_topic" value=""/>      # leave empty to start at point (0,0)
+    <param name="freq" value="6.0"/>                   # execution frequency
+    <param name="verbose" value="false"/>              # verbose
+  </node>
+
+  <!-- AMCL -->
+  <arg name="use_map_topic"  default="true"/>
+  <arg name="scan_topic"     default="scan"/>
+  <arg name="initial_pose_x" default="0.0"/>
+  <arg name="initial_pose_y" default="0.0"/>
+  <arg name="initial_pose_a" default="0.0"/>
+  <node pkg="amcl" type="amcl" name="amcl">
+    <param name="use_map_topic"             value="$(arg use_map_topic)"/>
+    <param name="odom_model_type"           value="diff"/>
+    <param name="odom_alpha5"               value="0.1"/>
+    <!-- Publish scans from best pose at a max of 4 Hz -->
+    <param name="gui_publish_rate"          value="4.0"/>
+    <param name="laser_max_beams"           value="60"/>
+    <param name="laser_max_range"           value="12.0"/>
+    <param name="min_particles"             value="500"/>
+    <param name="max_particles"             value="2000"/>
+    <param name="kld_err"                   value="0.05"/>
+    <param name="kld_z"                     value="0.99"/>
+    <param name="odom_alpha1"               value="0.2"/>
+    <param name="odom_alpha2"               value="0.2"/>
+    <!-- Translation standard deviation, m -->
+    <param name="odom_alpha3"               value="0.2"/>
+    <param name="odom_alpha4"               value="0.2"/>
+    <param name="laser_z_hit"               value="0.5"/>
+    <param name="laser_z_short"             value="0.05"/>
+    <param name="laser_z_max"               value="0.05"/>
+    <param name="laser_z_rand"              value="0.5"/>
+    <param name="laser_sigma_hit"           value="0.2"/>
+    <param name="laser_lambda_short"        value="0.1"/>
+    <param name="laser_model_type"          value="likelihood_field"/>
+    <!-- <param name="laser_model_type" value="beam"/> -->
+    <param name="laser_likelihood_max_dist" value="2.0"/>
+    <param name="update_min_d"              value="0.25"/>
+    <param name="update_min_a"              value="0.2"/>
+    <param name="global_frame_id"           value="map"/>
+    <param name="odom_frame_id"             value="odom"/>
+    <param name="base_frame_id"             value="base_link"/>
+    <param name="resample_interval"         value="1"/>
+    <!-- Increase tolerance because the computer can get quite busy -->
+    <param name="transform_tolerance"       value="1.0"/>
+    <param name="recovery_alpha_slow"       value="0.0"/>
+    <param name="recovery_alpha_fast"       value="0.0"/>
+    <param name="initial_pose_x"            value="$(arg initial_pose_x)"/>
+    <param name="initial_pose_y"            value="$(arg initial_pose_y)"/>
+    <param name="initial_pose_a"            value="$(arg initial_pose_a)"/>
+    <remap from="scan"                      to="$(arg scan_topic)"/>
+  </node>
+
+  <!-- RViz Node -->
+  <node name="rviz" pkg="rviz" type="rviz" respawn="false" output="screen" args="-d $(find racecar)/rviz/localization.rviz"/>
+
+</launch>
