@@ -1,11 +1,11 @@
-# F1TENTH | AutoDRIVE-F1TENTH
+# AutoDRIVE-F1TENTH
 
-### Simultaneous Localization and Mapping (Fall 2022)
+### Simultaneous Localization and Mapping (Fall 2022) | Vanilla F1TENTH
 
 | <img src="https://github.com/Tinker-Twins/F1TENTH/blob/main/Media/Fall%202022/Lab%20Setup.jpg" width="333"> | <img src="https://github.com/Tinker-Twins/F1TENTH/blob/main/Media/Fall%202022/SLAM.jpg" width="333"> | <img src="https://github.com/Tinker-Twins/F1TENTH/blob/main/Media/Fall%202022/Map.jpg" width="333"> |
 | :-----------------: | :-----------------: | :-----------------: |
 
-### Indoor and Outdoor Datasets for Soiled/Unsoiled Camera Lens (Summer 2022)
+### Indoor and Outdoor Datasets for Soiled/Unsoiled Camera Lens (Summer 2022) | AutoDRIVE-F1TENTH
 
 [GitHub](https://github.com/Tinker-Twins/F1TENTH-Webcam-Data-Recording-Pipeline)
 
