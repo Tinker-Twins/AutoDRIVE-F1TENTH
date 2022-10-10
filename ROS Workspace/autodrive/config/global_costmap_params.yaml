@@ -1,7 +1,7 @@
 global_costmap:
   global_frame: map
-  robot_base_frame: nigel
-  update_frequency: 2.0
+  robot_base_frame: base_link
+  update_frequency: 5.0
   publish_frequency: 5.0
   transform_tolerance: 30
   width: 80

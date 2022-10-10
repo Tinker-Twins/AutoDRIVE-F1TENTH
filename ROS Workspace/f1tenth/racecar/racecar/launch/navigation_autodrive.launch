@@ -5,8 +5,25 @@
   <!-- Global Parameter -->
   <param name="/use_sim_time" value="false"/>
 
-  <!-- F1TENTH Teleop Keyboard -->
-  <include file="$(find racecar)/launch/teleop_key.launch"/>
+  <!-- F1TENTH Bringup -->
+  <arg name="racecar_version" default="racecar-v2" />
+  <arg name="run_camera" default="false"/>
+  <group ns="vesc">
+    <!-- Spawn MUXs -->
+    <include file="$(find racecar)/launch/mux.launch" />
+    <!-- VESC Driver -->
+    <include file="$(find racecar)/launch/includes/$(arg racecar_version)/vesc.launch.xml" >
+      <arg name="racecar_version" value="$(arg racecar_version)" />
+    </include>
+  </group>
+
+  <!-- Start LIDAR -->
+  <include file="$(find racecar)/launch/includes/common/sensors.launch.xml" >
+    <arg name="racecar_version" value="$(arg racecar_version)" />
+  </include>
+
+  <!-- Static Transforms -->
+  <include file="$(find racecar)/launch/includes/$(arg racecar_version)/static_transforms.launch.xml" />
 
   <!-- Map -->
   <arg name="map_file" value="$(find racecar)/maps/f1tenth_armlab_circuit_2022_09_20.yaml"/>
@@ -74,7 +91,24 @@
     <remap from="scan"                      to="$(arg scan_topic)"/>
   </node>
 
-  <!-- RViz Node -->
-  <node name="rviz" pkg="rviz" type="rviz" respawn="false" output="screen" args="-d $(find racecar)/rviz/localization.rviz"/>
+  <!-- Navigation -->
+  <node pkg="move_base" type="move_base" respawn="false" name="planner">
+    <rosparam file="$(find autodrive)/config/common_costmap_params.yaml" command="load" ns="global_costmap"/>
+    <rosparam file="$(find autodrive)/config/common_costmap_params.yaml" command="load" ns="local_costmap"/>
+    <rosparam file="$(find autodrive)/config/global_costmap_params.yaml" command="load"/>
+    <rosparam file="$(find autodrive)/config/local_costmap_params.yaml" command="load"/>
+    <rosparam file="$(find autodrive)/config/planner_params.yaml" command="load"/>
+    <param name="base_global_planner" value="navfn/NavfnROS"/>
+    <param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS"/>
+    <param name="controller_frequency" value="10.0"/>
+    <param name="controller_patience" value="10.0"/>
+    <param name="clearing_rotation_allowed" value="false"/>
+  </node>
+
+  <!-- Control -->
+  <node pkg="autodrive" type="nav_ctrl.py" name="autodrive_controller"/>
+
+  <!-- RViz -->
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find racecar)/rviz/navigation.rviz"/>
 
 </launch>

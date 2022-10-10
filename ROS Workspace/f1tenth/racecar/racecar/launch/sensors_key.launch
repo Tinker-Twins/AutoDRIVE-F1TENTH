@@ -1,0 +1,31 @@
+<!-- -*- mode: XML -*- -->
+<launch>
+  
+  <!-- AutoDRIVE-F1TENTH Keyboard Teleop -->
+  <include file="$(find racecar)/launch/teleop_autodrive_key.launch"/>
+
+  <!-- F1TENTH LIDAR Node -->
+  <node name="hokuyo_lidar" pkg="urg_node" type="urg_node" output="screen">
+    <param name="ip_address" value="192.168.0.10"/>
+    <param name="frame_id" value="laser"/>
+    <param name="calibrate_time" value="true"/>
+    <param name="publish_intensity" value="false"/>
+    <param name="publish_multiecho" value="false"/>
+    <param name="angle_min" value="-2.35619"/>
+    <param name="angle_max" value="2.35619"/>
+  </node>
+ 
+  <!-- F1TENTH Camera Node -->
+  <node name="usb_cam" pkg="usb_cam" type="usb_cam_node" output="screen" >
+    <param name="video_device" value="/dev/video0" />
+    <param name="image_width" value="640" />
+    <param name="image_height" value="480" />
+    <param name="pixel_format" value="yuyv" />
+    <param name="camera_frame_id" value="usb_cam" />
+    <param name="io_method" value="mmap"/>
+  </node>
+
+  <!-- RViz Node -->
+  <node name="rviz" pkg="rviz" type="rviz" respawn="false" output="screen" args="-d $(find racecar)/rviz/sensors.rviz"/>
+
+</launch>

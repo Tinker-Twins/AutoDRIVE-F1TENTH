@@ -1,8 +1,8 @@
 <!-- -*- mode: XML -*- -->
 <launch>
 
-  <!-- F1TENTH Teleop Keyboard Node -->
-  <include file="$(find racecar)/launch/teleop_key.launch"/>
+  <!-- AutoDRIVE-F1TENTH Keyboard Teleop -->
+  <include file="$(find racecar)/launch/teleop_autodrive_key.launch"/>
 
   <!-- F1TENTH LIDAR Node -->
   <node name="hokuyo_lidar" pkg="urg_node" type="urg_node">

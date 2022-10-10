@@ -2,14 +2,14 @@
 
 import rospy
 from geometry_msgs.msg import Twist
-from std_msgs.msg import Float32
+from ackermann_msgs.msg import AckermannDriveStamped
 
 ################################################################################
 
 DRIVE_LIMIT = 1
 STEER_LIMIT = 1
-THROTTLE_CONST = 1/0.26
-STEERING_CONST = -1/0.5236
+THROTTLE_CONST = 4
+STEERING_CONST = 1
 
 def constrain(input, low, high):
     if input < low:
@@ -30,15 +30,19 @@ def boundDrive(drive_cmd):
 
 ################################################################################
 
-steer_pub = rospy.Publisher('steer_cmd', Float32, queue_size=10)
-drive_pub = rospy.Publisher('drive_cmd', Float32, queue_size=10)
+control_pub = rospy.Publisher('/vesc/low_level/ackermann_cmd_mux/input/teleop', AckermannDriveStamped, queue_size=10)
+control_msg = AckermannDriveStamped()
 
 def navCtrlCallback(data):
     global throttle, steering
-    throttle = boundDrive(0.2 + (THROTTLE_CONST * data.linear.x))
+    throttle = boundDrive(THROTTLE_CONST * data.linear.x)
     steering = boundSteer(STEERING_CONST * data.angular.z)
-    drive_pub.publish(Float32(throttle))
-    steer_pub.publish(Float32(steering))
+
+    control_msg.header.stamp = rospy.Time.now()
+    control_msg.header.frame_id = 'base_link'
+    control_msg.drive.speed = throttle
+    control_msg.drive.steering_angle = steering
+    control_pub.publish(control_msg)
 
 ################################################################################
 

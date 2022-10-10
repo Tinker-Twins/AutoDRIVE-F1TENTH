@@ -17,7 +17,7 @@
     </include>
   </group>
 
-  <!-- Start IMU and LIDAR -->
+  <!-- Start LIDAR -->
   <include file="$(find racecar)/launch/includes/common/sensors.launch.xml" >
     <arg name="racecar_version" value="$(arg racecar_version)" />
   </include>
@@ -25,7 +25,7 @@
   <!-- Static Transforms -->
   <include file="$(find racecar)/launch/includes/$(arg racecar_version)/static_transforms.launch.xml" />
 
-  <!-- F1TENTH Keyboard Teleop Node -->
-  <node name="teleop_keyboard" pkg="racecar" type="key_teleop.py" output="screen" />
+  <!-- AutoDRIVE-F1TENTH Keyboard Teleop Node -->
+  <node name="teleop_keyboard" pkg="autodrive" type="teleop.py" output="screen" />
 
 </launch>
