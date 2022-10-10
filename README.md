@@ -1,4 +1,4 @@
-# F1TENTH
+# F1TENTH | AutoDRIVE-F1TENTH
 
 ### Simultaneous Localization and Mapping (Fall 2022)
 
