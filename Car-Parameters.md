@@ -9,3 +9,5 @@
 | Track Width  | 0.23 m |
 | Front Offset | 0.09 m |
 | Rear Offset  | 0.08 m |
+
+#### Reference: src/autodrive/config/planner_params.yaml
