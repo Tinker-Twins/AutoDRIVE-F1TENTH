@@ -9,6 +9,8 @@
 | Track Width  | 0.23 m |
 | Front Offset | 0.09 m |
 | Rear Offset  | 0.08 m |
+| Min Turning Radius (@ Max Steering Angle) | 0.5716 m |
+| Max Steering Angle | 0.523599 rad (30 deg) |
 
 #### Reference: src/autodrive/config/planner_params.yaml
 
