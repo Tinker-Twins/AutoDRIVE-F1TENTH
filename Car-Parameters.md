@@ -26,8 +26,8 @@
 | Max Acceleration | 2.5 m/s<sup>2</sup> |
 | Min Braking Command | -20000 |
 | Max Braking Command | 200000 |
-| Min Speed Command (ERPM) | -23250 |
-| Max Speed Command (ERPM) | 23250 |
+| Min Speed Command | -23250 |
+| Max Speed Command | 23250 |
 | Min Braking Command | -20000 |
 | Max Braking Command | 200000 |
 | Min Steering Command | 0.15 |
