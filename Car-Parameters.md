@@ -2,7 +2,7 @@
 
 <img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH-ARMLab/blob/main/AutoDRIVE-F1TENTH-ARMLab.jpg" alt="AutoDRIVE-F1TENTH-ARMLab" width="525"/>
 
-## Geometric Parameters
+## Kinematic Parameters
 | Parameter | Value |
 | :-------: | :---: |
 | Car Length   | 0.50 m |
@@ -13,10 +13,16 @@
 | Rear Offset  | 0.08 m |
 | Min Turning Radius (@ Max Steering Angle) | 0.5716 m |
 | Max Steering Angle | 0.523599 rad (30 deg) |
+| Max Speed (Car Limit) | 8.9408 m/s (20 mph) |
 
-#### Reference: src/autodrive/config/planner_params.yaml
+#### References:
+`src/autodrive/config/planner_params.yaml`
 
 ## VESC Parametrs
+
+| Parameter | Value |
+| :-------: | :---: |
+| Max Steering Rate | 3.2 rad/s |
 
 1. erpm (electrical rpm) = speed_to_erpm_gain * speed (meters / second) + speed_to_erpm_offset
 
@@ -79,3 +85,5 @@ position_max: 0.0
 servo_min: 0.15
 
 servo_max: 0.85
+
+`src/f1tenth/racecar/racecar/config/racecar-v2/vesc.yaml`
