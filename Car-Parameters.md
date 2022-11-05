@@ -1,5 +1,7 @@
 # F1TENTH Car Parameters
 
+<img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH-ARMLab/blob/main/AutoDRIVE-F1TENTH-ARMLab.jpg" alt="AutoDRIVE-F1TENTH-ARMLab" width="525"/>
+
 ## Geometric Parameters
 | Parameter | Value |
 | :-------: | :---: |
