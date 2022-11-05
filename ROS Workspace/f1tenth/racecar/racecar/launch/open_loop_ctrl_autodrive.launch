@@ -1,0 +1,22 @@
+<!-- -*- mode: XML -*- -->
+<launch>
+
+  <!-- F1TENTH VESC -->
+  <arg name="racecar_version" default="racecar-v2" />
+  <arg name="run_camera" default="false"/>
+  <group ns="vesc">
+    <!-- Spawn MUXs -->
+    <include file="$(find racecar)/launch/mux.launch" />
+    <!-- VESC Driver -->
+    <include file="$(find racecar)/launch/includes/$(arg racecar_version)/vesc.launch.xml" >
+      <arg name="racecar_version" value="$(arg racecar_version)" />
+    </include>
+  </group>
+
+  <!-- Static Transforms -->
+  <include file="$(find racecar)/launch/includes/$(arg racecar_version)/static_transforms.launch.xml" />
+
+  <!-- AutoDRIVE-F1TENTH Keyboard Teleop Node -->
+  <node name="teleop_keyboard" pkg="autodrive" type="ol_ctrl.py" output="screen" />
+
+</launch>

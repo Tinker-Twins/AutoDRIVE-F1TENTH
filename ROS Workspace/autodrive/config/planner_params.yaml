@@ -17,16 +17,17 @@ TebLocalPlannerROS:
   feasibility_check_no_poses: 2
   allow_init_backward_motion: false
   # Robot
-  # car length = 0.50   car width = 0.27
-  # wheel base = 0.33   track width = 0.23
-  # front offset = 0.09 rear offset = 0.08
+  # car length = 0.50 m     car width = 0.27 m
+  # wheel base = 0.33 m     track width = 0.23 m
+  # front offset = 0.09 m   rear offset = 0.08 m
+  # max steering angle = 30 deg
   max_vel_x: 0.4 # m/s
   max_vel_x_backwards: 0.2 # m/s
   max_vel_theta: 0.2 # rad/s [angular velocity is also bounded by min_turning_radius in case of a carlike robot (omega = v/r)]
   acc_lim_x: 0.15
   acc_lim_theta: 0.3927
   # Carlike robot parameters
-  min_turning_radius: 0.74 # min turning radius of the carlike robot (compute value using a model or adjust with rqt_reconfigure manually)
+  min_turning_radius: 0.5716 # min turning radius of the carlike robot (compute value using a model or adjust with rqt_reconfigure manually)
   wheelbase: 0.33 # wheelbase of the carlike robot
   cmd_angle_instead_rotvel: True # return steering angle instead of the rotvel (angular.z of twist message)
   footprint_model:
