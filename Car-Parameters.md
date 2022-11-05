@@ -1,6 +1,6 @@
 # F1TENTH Car Parameters
 
-<img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH-ARMLab/blob/main/AutoDRIVE-F1TENTH-ARMLab.jpg" alt="AutoDRIVE-F1TENTH-ARMLab" width="525"/>
+<img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH/blob/main/Media/Fall%202022/SLAM.jpg" alt="AutoDRIVE-F1TENTH-ARMLab" width="525"/>
 
 ## Kinematic Parameters
 | Parameter | Value |
@@ -12,10 +12,10 @@
 | Front Offset | 0.09 m |
 | Rear Offset  | 0.08 m |
 | Min Turning Radius (@ Max Steering Angle) | 0.5716 m |
-| Max Steering Angle | 0.523599 rad (30 deg) |
-| Max Speed (Car Limit) | 8.9408 m/s (20 mph) |
+| Max Steering Angle (Wheel-Road Angle) | 0.523599 rad (30 deg) |
+| Max Speed :warning: Physical Car Limit :warning: | 8.9408 m/s (20 mph) |
 
-#### References:
+### Reference:
 `src/autodrive/config/planner_params.yaml`
 
 ## VESC Parametrs
@@ -23,67 +23,25 @@
 | Parameter | Value |
 | :-------: | :---: |
 | Max Steering Rate | 3.2 rad/s |
+| Max Acceleration | 2.5 m/s<sup>2</sup> |
+| Min Braking Command | -20000 |
+| Max Braking Command | 200000 |
+| Min Speed Command (ERPM) | -23250 |
+| Max Speed Command (ERPM) | 23250 |
+| Min Braking Command | -20000 |
+| Max Braking Command | 200000 |
+| Min Steering Command | 0.15 |
+| Max Steering Command | 0.85 |
 
-1. erpm (electrical rpm) = speed_to_erpm_gain * speed (meters / second) + speed_to_erpm_offset
+### Notes:
 
-speed_to_erpm_gain: 4614
+- **Speed Command:** `erpm (electrical rpm) = speed_to_erpm_gain * speed (m/s) + speed_to_erpm_offset`
+  - `speed_to_erpm_gain`: 4614
+  - `speed_to_erpm_offset`: 0.0
 
-speed_to_erpm_offset: 0.0
+- **Steering Command:** servo_value (normalized 0 to 1) =  steering_angle_to_servo_gain * steering angle (rad) + steering_angle_to_servo_offset
+  - `steering_angle_to_servo_gain`: -1.2135
+  - `steering_angle_to_servo_offset`: 0.435 (zero steer offset)
 
-tachometer_ticks_to_meters_gain: 0.00225
-
-2. servo smoother - limits rotation speed and smooths anything above limit
-
-max_servo_speed: 3.2 # radians/second
-
-servo_smoother_rate: 75.0 # messages/sec
-
-3. servo smoother - limits acceleration and smooths anything above limit
-
-max_acceleration: 2.5 # meters/second^2
-
-throttle_smoother_rate: 75.0 # messages/sec
-
-4. servo value (0 to 1) =  steering_angle_to_servo_gain * steering angle (radians) + steering_angle_to_servo_offset
-
-steering_angle_to_servo_gain: -1.2135
-
-steering_angle_to_servo_offset: 0.435 # 0.5304
-
-5. publish odom to base link tf
-
-vesc_to_odom/publish_tf: false
-
-6. car wheelbase is about 0.33 m 
-
-wheelbase: 0.33
-
-7. vesc_driver:
-
-port: /dev/sensors/vesc
-
-duty_cycle_min: 0.0
-
-duty_cycle_max: 0.0
-
-current_min: 0.0
-
-current_max: 100.0
-
-brake_min: -20000.0
-
-brake_max: 200000.0
-
-speed_min: -23250
-
-speed_max: 23250
-
-position_min: 0.0
-
-position_max: 0.0
-
-servo_min: 0.15
-
-servo_max: 0.85
-
+### Reference:
 `src/f1tenth/racecar/racecar/config/racecar-v2/vesc.yaml`
