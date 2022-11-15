@@ -40,6 +40,11 @@ if __name__=="__main__":
     
     rospy.init_node('open_loop_ctrl')
 
+    lin_vel = rospy.get_param('/open_loop_ctrl/lin_vel')
+    ang_vel = rospy.get_param('/open_loop_ctrl/ang_vel')
+    lin_noise = rospy.get_param('/open_loop_ctrl/lin_noise')
+    ang_noise = rospy.get_param('/open_loop_ctrl/ang_noise')
+
     ol_ctrl_pub = rospy.Publisher('/vesc/low_level/ackermann_cmd_mux/input/teleop', AckermannDriveStamped, queue_size=10)
     ol_ctrl_msg = AckermannDriveStamped()
 
@@ -52,12 +57,14 @@ if __name__=="__main__":
             #ang_vel = 0.523599
             # Constant control inputs with Gaussian noise (sampled from normal distribution)
             # Reference Example: noise = np.random.normal(0,1) 0 mean and 1 std dev
-            lin_vel = 1.5 + np.random.normal(0,0.1)
-            ang_vel = 0.4 + np.random.normal(0,0.2)
+            #lin_vel = 1.5 + np.random.normal(0,0.1)
+            #ang_vel = 0.4 + np.random.normal(0,0.2)
+            lin_vel_cmd = lin_vel + np.random.normal(0,lin_noise)
+            ang_vel_cmd = ang_vel + np.random.normal(0,ang_noise)
             ol_ctrl_msg.header.stamp = rospy.Time.now()
             ol_ctrl_msg.header.frame_id = 'base_link'
-            ol_ctrl_msg.drive.speed = lin_vel
-            ol_ctrl_msg.drive.steering_angle = ang_vel
+            ol_ctrl_msg.drive.speed = lin_vel_cmd
+            ol_ctrl_msg.drive.steering_angle = ang_vel_cmd
             #print("Lin Vel : {:.4} m/s".format(ol_ctrl_msg.drive.speed))
             #print("Ang Vel : {:.4} rad/s".format(ol_ctrl_msg.drive.steering_angle))
             ol_ctrl_pub.publish(ol_ctrl_msg)
