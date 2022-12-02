@@ -1,11 +1,17 @@
 # AutoDRIVE-F1TENTH
 
-### Odometry, SLAM, AMCL and  Autonomous Navigation (Fall 2022)
+
+### Ground Truth (MoCap) Pose Recording Pipeline & Datasets (Fall 2022)
+
+| <img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH/blob/main/Media/Fall%202022/Vehicle%20with%20MoCap%20Markers.JPG" width="333"> | <img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH/blob/main/Media/Fall%202022/Teleoperation%20in%20MoCap%20Area.png" width="333"> | <img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH/blob/main/Media/Fall%202022/Open%20Loop%20Control%20in%20MoCap%20Area.jpg" width="333"> |
+| :-----------------: | :-----------------: | :-----------------: |
+
+### [Odometry, SLAM, AMCL and  Autonomous Navigation](https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH) (Fall 2022)
 
 | <img src="https://github.com/Tinker-Twins/F1TENTH/blob/main/Media/Fall%202022/Lab%20Setup.jpg" width="333"> | <img src="https://github.com/Tinker-Twins/F1TENTH/blob/main/Media/Fall%202022/SLAM.jpg" width="333"> | <img src="https://github.com/Tinker-Twins/F1TENTH/blob/main/Media/Fall%202022/Map.jpg" width="333"> |
 | :-----------------: | :-----------------: | :-----------------: |
 
-### [Indoor/Outdoor Soiled/Unsoiled Camera Datasets](https://github.com/Tinker-Twins/F1TENTH-Webcam-Data-Recording-Pipeline) (Summer 2022)
+### [Indoor/Outdoor Soiled/Unsoiled Camera Recording Pipeline & Datasets](https://github.com/Tinker-Twins/F1TENTH-Webcam-Data-Recording-Pipeline) (Summer 2022)
 
 | ![1](https://github.com/Tinker-Twins/F1TENTH/blob/main/Media/Summer%202022/Vehicle%20Indoor.jpg)|![2](https://github.com/Tinker-Twins/F1TENTH/blob/main/Media/Summer%202022/Vehicle%20Outdoor.jpg)|![3](https://github.com/Tinker-Twins/F1TENTH/blob/main/Media/Summer%202022/Camera%20Mount.jpg)|![4](https://github.com/Tinker-Twins/F1TENTH/blob/main/Media/Summer%202022/Lab%20Data%20Collection.jpg)|
 | :-----------------: | :-----------------: | :-----------------: | :-----------------: |
