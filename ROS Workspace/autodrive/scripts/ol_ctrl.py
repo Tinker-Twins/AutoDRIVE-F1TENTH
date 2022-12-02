@@ -87,7 +87,7 @@ if __name__=="__main__":
             #lin_vel = 1.5 + np.random.normal(0,0.1)
             #ang_vel = 0.4 + np.random.normal(0,0.2)
             # Straight
-            t_delay = rospy.Duration.from_sec(0.8*lin_vel_cmd).to_sec()
+            t_delay = rospy.Duration.from_sec(2.5/lin_vel).to_sec()
             t_start = rospy.Time.now().to_sec()
             while (rospy.Time.now().to_sec() - t_start) <= t_delay:
                 lin_vel_cmd = lin_vel + np.random.normal(0,lin_noise)
@@ -101,7 +101,7 @@ if __name__=="__main__":
                 ol_ctrl_pub.publish(ol_ctrl_msg)
             for i in range(3):
 		    # Left
-		    t_delay = rospy.Duration.from_sec(0.2*lin_vel_cmd).to_sec()
+		    t_delay = rospy.Duration.from_sec(1.0/lin_vel).to_sec()
 		    t_start = rospy.Time.now().to_sec()
 		    while (rospy.Time.now().to_sec() - t_start) <= t_delay:
 		        lin_vel_cmd = lin_vel + np.random.normal(0,lin_noise)
@@ -114,7 +114,7 @@ if __name__=="__main__":
 		        #print("Ang Vel : {:.4} rad/s".format(ol_ctrl_msg.drive.steering_angle))
 		        ol_ctrl_pub.publish(ol_ctrl_msg)
 		    # Right
-		    t_delay = rospy.Duration.from_sec(0.2*lin_vel_cmd).to_sec()
+		    t_delay = rospy.Duration.from_sec(1.0/lin_vel).to_sec()
 		    t_start = rospy.Time.now().to_sec()
 		    while (rospy.Time.now().to_sec() - t_start) <= t_delay:
 		        lin_vel_cmd = lin_vel + np.random.normal(0,lin_noise)
@@ -137,7 +137,7 @@ if __name__=="__main__":
             #print("Ang Vel : {:.4} rad/s".format(ol_ctrl_msg.drive.steering_angle))
             ol_ctrl_pub.publish(ol_ctrl_msg)
 
-            rospy.signal_shutdown()
+            rospy.signal_shutdown('Test completed!')
 ################################################################################
             rate.sleep()
     except rospy.ROSInterruptException:
