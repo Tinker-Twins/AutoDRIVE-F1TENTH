@@ -1,0 +1,28 @@
+<!-- -*- mode: XML -*- -->
+<launch>
+
+  <arg name="rosbag_dir" default="$(find racecar)/rosbag"/>
+  <arg name="rosbag_name" default="f1tenth_mocap_rosbag"/>
+  
+  <!-- AutoDRIVE-F1TENTH Keyboard Teleop -->
+  <!--include file="$(find racecar)/launch/teleop_autodrive_key.launch"/-->
+  
+  <!-- AutoDRIVE-F1TENTH Open Loop Control -->
+  <!--
+  <include file="$(find racecar)/launch/open_loop_ctrl_autodrive.launch">
+  <arg name="lin_vel" default="2.0" />
+  <arg name="ang_vel" default="0.5" />
+  <arg name="lin_noise" default="0.0" />
+  <arg name="ang_noise" default="0.0" />
+  </include>
+  -->
+  
+  <!-- Throttle Nodes -->
+  <!-- To match the frequency of different topics to be recorded (i.e. recording synchronously) -->
+  <node name="states_throttler" type="throttle" pkg="topic_tools" args="messages /mocap_node/F1tenth_koopman/ground_pose 60 /states_throttled" />
+  <node name="inputs_throttler" type="throttle" pkg="topic_tools" args="messages /vesc/low_level/ackermann_cmd_mux/input/teleop 60 /inputs_throttled" />
+  
+  <!-- ROS Bag Node -->
+  <node name="data_recorder" pkg="rosbag" type="record" args="record -b 4096 -O $(arg rosbag_dir)/$(arg rosbag_name) /states_throttled /inputs_throttled" />
+
+</launch>
