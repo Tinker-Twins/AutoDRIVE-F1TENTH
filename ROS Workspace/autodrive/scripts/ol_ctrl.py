@@ -66,13 +66,27 @@ if __name__=="__main__":
             ol_ctrl_pub.publish(ol_ctrl_msg)
             '''
 ################################################################################
-            # Skid-pad test (constant control inputs with Gaussian noise - sampled from normal distribution)
+            # Skidpad test (constant control inputs with Gaussian noise - sampled from normal distribution)
             # Reference Example: noise = np.random.normal(0,1) 0 mean and 1 std dev
             #lin_vel = 1.5 + np.random.normal(0,0.1)
             #ang_vel = 0.4 + np.random.normal(0,0.2)
             '''
-            lin_vel_cmd = lin_vel + np.random.normal(0,lin_noise)
-            ang_vel_cmd = ang_vel + np.random.normal(0,ang_noise)
+            # Skidpad
+	    t_delay = rospy.Duration.from_sec(10).to_sec()
+	    t_start = rospy.Time.now().to_sec()
+	    while (rospy.Time.now().to_sec() - t_start) <= t_delay:
+	        lin_vel_cmd = lin_vel + np.random.normal(0,lin_noise)
+	        ang_vel_cmd = ang_vel + np.random.normal(0,ang_noise)
+	        ol_ctrl_msg.header.stamp = rospy.Time.now()
+	        ol_ctrl_msg.header.frame_id = 'base_link'
+	        ol_ctrl_msg.drive.speed = lin_vel_cmd
+	        ol_ctrl_msg.drive.steering_angle = ang_vel_cmd
+	        #print("Lin Vel : {:.4} m/s".format(ol_ctrl_msg.drive.speed))
+	        #print("Ang Vel : {:.4} rad/s".format(ol_ctrl_msg.drive.steering_angle))
+	        ol_ctrl_pub.publish(ol_ctrl_msg)
+	    # Stop
+	    lin_vel_cmd = 0
+            ang_vel_cmd = 0
             ol_ctrl_msg.header.stamp = rospy.Time.now()
             ol_ctrl_msg.header.frame_id = 'base_link'
             ol_ctrl_msg.drive.speed = lin_vel_cmd
@@ -80,13 +94,15 @@ if __name__=="__main__":
             #print("Lin Vel : {:.4} m/s".format(ol_ctrl_msg.drive.speed))
             #print("Ang Vel : {:.4} rad/s".format(ol_ctrl_msg.drive.steering_angle))
             ol_ctrl_pub.publish(ol_ctrl_msg)
+
+            rospy.signal_shutdown('Skidpad test completed!')
             '''
 ################################################################################
             # Slalom test (constant linear velocity and time-delayed varying steering with Gaussian noise - sampled from normal distribution)
             # Reference Example: noise = np.random.normal(0,1) 0 mean and 1 std dev
             #lin_vel = 1.5 + np.random.normal(0,0.1)
             #ang_vel = 0.4 + np.random.normal(0,0.2)
-            '''
+            #'''
             # Straight
             t_delay = rospy.Duration.from_sec(2.5/lin_vel).to_sec()
             t_start = rospy.Time.now().to_sec()
@@ -139,22 +155,23 @@ if __name__=="__main__":
             #print("Ang Vel : {:.4} rad/s".format(ol_ctrl_msg.drive.steering_angle))
             ol_ctrl_pub.publish(ol_ctrl_msg)
 
-            rospy.signal_shutdown('Test completed!')
-            '''
+            rospy.signal_shutdown('Slalom test completed!')
+            #'''
 ################################################################################
             # Fishhook test (constant linear velocity and time-delayed varying steering with Gaussian noise - sampled from normal distribution)
             # Reference Example: noise = np.random.normal(0,1) 0 mean and 1 std dev
             #lin_vel = 1.5 + np.random.normal(0,0.1)
             #ang_vel = 0.4 + np.random.normal(0,0.2)
             # Fishhook
+            '''
             for delta in [0.15,0.175,0.2,0.225,0.25]:
-                print(delta)
+                #print(delta)
             	turn_rad = 0.33/np.tan(delta)
-	    	t_delay = rospy.Duration.from_sec(2*np.pi*turn_rad/lin_vel).to_sec()
+	    	t_delay = rospy.Duration.from_sec(10).to_sec()
 	    	t_start = rospy.Time.now().to_sec()
 	   	while (rospy.Time.now().to_sec() - t_start) <= t_delay:
 	     	    lin_vel_cmd = lin_vel + np.random.normal(0,lin_noise)
-	    	    ang_vel_cmd = delta
+	    	    ang_vel_cmd = delta + np.random.normal(0,ang_noise)
 	     	    ol_ctrl_msg.header.stamp = rospy.Time.now()
 	      	    ol_ctrl_msg.header.frame_id = 'base_link'
 	      	    ol_ctrl_msg.drive.speed = lin_vel_cmd
@@ -173,7 +190,8 @@ if __name__=="__main__":
             #print("Ang Vel : {:.4} rad/s".format(ol_ctrl_msg.drive.steering_angle))
             ol_ctrl_pub.publish(ol_ctrl_msg)
 
-            rospy.signal_shutdown('Test completed!')
+            rospy.signal_shutdown('Fishhook test completed!')
+            '''
 ################################################################################
             rate.sleep()
     except rospy.ROSInterruptException:
