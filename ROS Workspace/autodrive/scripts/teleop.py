@@ -40,10 +40,10 @@ else:
 
 ################################################################################
 
-DRIVE_LIMIT = 5
-STEER_LIMIT = 1
+DRIVE_LIMIT = 5 # 3
+STEER_LIMIT = 0.52
 DRIVE_STEP_SIZE = 1
-STEER_STEP_SIZE = 1
+STEER_STEP_SIZE = 0.52 # 0.13
 
 info = """
 -------------------------------------
