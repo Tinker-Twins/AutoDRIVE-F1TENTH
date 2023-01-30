@@ -43,7 +43,7 @@ else:
 DRIVE_LIMIT = 5 # 3
 STEER_LIMIT = 0.52
 DRIVE_STEP_SIZE = 1
-STEER_STEP_SIZE = 0.52 # 0.13
+STEER_STEP_SIZE = 0.104 # 0.52
 
 info = """
 -------------------------------------
