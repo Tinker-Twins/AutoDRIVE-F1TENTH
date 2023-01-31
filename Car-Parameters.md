@@ -35,12 +35,12 @@
 
 ### Notes:
 
-- **Speed Command:** `erpm (electrical rpm) = speed_to_erpm_gain * speed (m/s) + speed_to_erpm_offset`
-  - `speed_to_erpm_gain`: 4614
-  - `speed_to_erpm_offset`: 0.0
+- #### Drive motor erpm (electrical rpm) = speed_to_erpm_gain * speed (meters / second) + speed_to_erpm_offset
+  - `speed_to_erpm_gain`: 7300
+  - `speed_to_erpm_offset`: 250
 
-- **Steering Command:** servo_value (normalized 0 to 1) =  steering_angle_to_servo_gain * steering angle (rad) + steering_angle_to_servo_offset
-  - `steering_angle_to_servo_gain`: -1.2135
+- #### Steer servo value (0 to 1) =  steering_angle_to_servo_gain * steering angle (radians) + steering_angle_to_servo_offset
+  - `steering_angle_to_servo_gain`: -0.6
   - `steering_angle_to_servo_offset`: 0.435 (zero steer offset)
 
 ### Reference:
