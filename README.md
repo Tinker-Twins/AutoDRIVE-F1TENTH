@@ -1,7 +1,7 @@
 # AutoDRIVE-F1TENTH
 
 
-### [Ground Truth (Mocap) Pose Recording Pipeline & Datasets](https://github.com/Tinker-Twins/F1TENTH-Mocap-Data-Recording-Pipeline) (Fall 2022)
+### [Ground Truth (Mocap) Pose Recording Pipeline & Datasets](https://github.com/Tinker-Twins/F1TENTH-Mocap-Data-Recording-Pipeline) (Fall 2022 - Spring 2023)
 
 | <img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH/blob/main/Media/Fall%202022/Vehicle%20with%20Mocap%20Markers.JPG" width="333"> | <img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH/blob/main/Media/Fall%202022/Teleoperation%20in%20Mocap%20Area.png" width="333"> | <img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH/blob/main/Media/Fall%202022/Open%20Loop%20Control%20in%20Mocap%20Area%201.JPG" width="333"> |
 | :-----------------: | :-----------------: | :-----------------: |
