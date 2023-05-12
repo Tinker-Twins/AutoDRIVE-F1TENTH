@@ -17,3 +17,21 @@
 | ![1](https://github.com/Tinker-Twins/F1TENTH/blob/main/Media/Summer%202022/Vehicle%20Indoor.jpg)|![2](https://github.com/Tinker-Twins/F1TENTH/blob/main/Media/Summer%202022/Vehicle%20Outdoor.jpg)|![3](https://github.com/Tinker-Twins/F1TENTH/blob/main/Media/Summer%202022/Camera%20Mount.jpg)|![4](https://github.com/Tinker-Twins/F1TENTH/blob/main/Media/Summer%202022/Lab%20Data%20Collection.jpg)|
 | :-----------------: | :-----------------: | :-----------------: | :-----------------: |
 | ![5](https://github.com/Tinker-Twins/F1TENTH/blob/main/Media/Summer%202022/Mulch%20Data%20Collection%201.jpg)|![6](https://github.com/Tinker-Twins/F1TENTH/blob/main/Media/Summer%202022/Mulch%20Data%20Collection%202.jpg)|![7](https://github.com/Tinker-Twins/F1TENTH/blob/main/Media/Summer%202022/Grass%20Data%20Collection%201.jpg)|![8](https://github.com/Tinker-Twins/F1TENTH/blob/main/Media/Summer%202022/Grass%20Data%20Collection%202.jpg)|
+
+## Citation
+
+We encourage you to read and cite the following paper if you use any part of this work for your research:
+
+#### [AutoDRIVE: A Comprehensive, Flexible and Integrated Cyber-Physical Ecosystem for Enhancing Autonomous Driving Research and Education](https://arxiv.org/abs/2212.05241)
+```bibtex
+@eprint{AutoDRIVE-Ecosystem-2022,
+doi = {10.48550/ARXIV.2212.05241},
+url = {https://arxiv.org/abs/2212.05241},
+author = {Samak, Tanmay Vilas and Samak, Chinmay Vilas and Kandhasamy, Sivanathan and Krovi, Venkat and Xie, Ming},
+keywords = {Robotics (cs.RO), FOS: Computer and information sciences, FOS: Computer and information sciences},
+title = {AutoDRIVE: A Comprehensive, Flexible and Integrated Cyber-Physical Ecosystem for Enhancing Autonomous Driving Research and Education},
+publisher = {arXiv},
+year = {2022},
+copyright = {arXiv.org perpetual, non-exclusive license}
+}
+```
