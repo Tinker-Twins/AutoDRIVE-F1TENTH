@@ -5,7 +5,7 @@
 | <img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH/blob/main/Media/Summer%202023/Racecar.jpg" width="333"> | <img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH/blob/main/Media/Summer%202023/Award%20Ceremony.JPG" width="333"> | <img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH/blob/main/Media/Summer%202023/Certificates.JPG" width="333"> |
 | :-----------------: | :-----------------: | :-----------------: |
 
-### [Ground Truth (Mocap) Pose Recording Pipeline & Datasets](https://github.com/Tinker-Twins/F1TENTH-Mocap-Data-Recording-Pipeline) (Spring 2023)
+### [Ground Truth (Mocap) Data Recording Pipeline & Datasets](https://github.com/Tinker-Twins/F1TENTH-Mocap-Data-Recording-Pipeline) (Spring 2023)
 
 | <img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH/blob/main/Media/Spring%202023/Vehicle%20with%20Mocap%20Markers.JPG" width="333"> | <img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH/blob/main/Media/Spring%202023/Teleoperation%20in%20Mocap%20Area.png" width="333"> | <img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH/blob/main/Media/Spring%202023/Open%20Loop%20Control%20in%20Mocap%20Area%201.JPG" width="333"> |
 | :-----------------: | :-----------------: | :-----------------: |
