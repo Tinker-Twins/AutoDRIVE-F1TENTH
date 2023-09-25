@@ -18,7 +18,7 @@
 
 ### [Indoor/Outdoor Soiled/Unsoiled Camera Recording Pipeline & Datasets](https://github.com/Tinker-Twins/F1TENTH-Webcam-Data-Recording-Pipeline) (Summer 2022)
 
-| ![1](https://github.com/Tinker-Twins/F1TENTH/blob/main/Media/Summer%202022/Vehicle%20Indoor.jpg)|![2](https://github.com/Tinker-Twins/F1TENTH/blob/main/Media/Summer%202022/Vehicle%20Outdoor.jpg)|![3](https://github.com/Tinker-Twins/F1TENTH/blob/main/Media/Summer%202022/Camera%20Mount.jpg)|![4](https://github.com/Tinker-Twins/F1TENTH/blob/main/Media/Summer%202022/Lab%20Data%20Collection.jpg)|
+| <img src="https://github.com/Tinker-Twins/F1TENTH/blob/main/Media/Summer%202022/Vehicle%20Indoor.jpg" width="333"> | <img src="https://github.com/Tinker-Twins/F1TENTH/blob/main/Media/Summer%202022/Vehicle%20Outdoor.jpg" width="333"> | <img src="https://github.com/Tinker-Twins/F1TENTH/blob/main/Media/Summer%202022/Camera%20Mount.jpg" width="333"> | <img src="https://github.com/Tinker-Twins/F1TENTH/blob/main/Media/Summer%202022/Lab%20Data%20Collection.jpg" width="333"> |
 | :-----------------: | :-----------------: | :-----------------: | :-----------------: |
 | ![5](https://github.com/Tinker-Twins/F1TENTH/blob/main/Media/Summer%202022/Mulch%20Data%20Collection%201.jpg)|![6](https://github.com/Tinker-Twins/F1TENTH/blob/main/Media/Summer%202022/Mulch%20Data%20Collection%202.jpg)|![7](https://github.com/Tinker-Twins/F1TENTH/blob/main/Media/Summer%202022/Grass%20Data%20Collection%201.jpg)|![8](https://github.com/Tinker-Twins/F1TENTH/blob/main/Media/Summer%202022/Grass%20Data%20Collection%202.jpg)|
 
