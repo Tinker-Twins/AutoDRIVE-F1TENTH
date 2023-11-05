@@ -9,7 +9,7 @@
 | Wheel Weight | 0.109 kg |
 | Car Length   | 0.50 m |
 | Car Width    | 0.27 m |
-| Wheelbase    | 0.324 m |
+| Wheelbase    | 0.33 m |
 | Track Width  | 0.236 m |
 | Front Offset | 0.09 m |
 | Rear Offset  | 0.08 m |
