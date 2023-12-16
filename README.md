@@ -2,9 +2,9 @@
 
 ### [Scaled Autonomous Vehicles @ CU-ICAR](https://github.com/Tinker-Twins/Scaled-Autonomous-Vehicles) (Fall 2023)
 
-| <img src="https://github.com/Tinker-Twins/Scaled-Autonomous-Vehicles/blob/main/Project%20Media/AutoDRIVE-F1TENTH-PortoTrack-Simulator/Replay-F1TENTH.gif" width="333"> | <img src="https://github.com/Tinker-Twins/Scaled-Autonomous-Vehicles/blob/main/Project%20Media/AutoDRIVE-F1TENTH-PortoTrack-Simulator/Map-Autoware.gif" width="333"> | <img src="https://github.com/Tinker-Twins/Scaled-Autonomous-Vehicles/blob/main/Project%20Media/AutoDRIVE-F1TENTH-PortoTrack-Simulator/Replay-Autoware.gif" width="333"> |
+| <img src="https://github.com/Tinker-Twins/Scaled-Autonomous-Vehicles/blob/main/Project%20Media/AutoDRIVE-F1TENTH-PortoTrack-Simulator/Replay-F1TENTH.gif" width="306"> | <img src="https://github.com/Tinker-Twins/Scaled-Autonomous-Vehicles/blob/main/Project%20Media/AutoDRIVE-F1TENTH-PortoTrack-Simulator/Map-Autoware.gif" width="306"> | <img src="https://github.com/Tinker-Twins/Scaled-Autonomous-Vehicles/blob/main/Project%20Media/AutoDRIVE-F1TENTH-PortoTrack-Simulator/Replay-Autoware.gif" width="306"> |
 | :-----------------: | :-----------------: | :-----------------: |
-| <img src="https://github.com/Tinker-Twins/Scaled-Autonomous-Vehicles/blob/main/Project%20Media/AutoDRIVE-F1TENTH-ARMLab-Testbed/Replay-F1TENTH.gif" width="333"> | <img src="https://github.com/Tinker-Twins/Scaled-Autonomous-Vehicles/blob/main/Project%20Media/AutoDRIVE-F1TENTH-ARMLab-Testbed/Map-Autoware.gif" width="333"> | <img src="https://github.com/Tinker-Twins/Scaled-Autonomous-Vehicles/blob/main/Project%20Media/AutoDRIVE-F1TENTH-ARMLab-Testbed/Replay-Autoware.gif" width="333"> |
+| <img src="https://github.com/Tinker-Twins/Scaled-Autonomous-Vehicles/blob/main/Project%20Media/AutoDRIVE-F1TENTH-ARMLab-Testbed/Replay-F1TENTH.gif" width="306"> | <img src="https://github.com/Tinker-Twins/Scaled-Autonomous-Vehicles/blob/main/Project%20Media/AutoDRIVE-F1TENTH-ARMLab-Testbed/Map-Autoware.gif" width="306"> | <img src="https://github.com/Tinker-Twins/Scaled-Autonomous-Vehicles/blob/main/Project%20Media/AutoDRIVE-F1TENTH-ARMLab-Testbed/Replay-Autoware.gif" width="306"> |
 
 ### [F1TENTH IV2023 Championship - 2nd Place Winner](https://iv2023-race.f1tenth.org) (Summer 2023)
 
@@ -47,4 +47,4 @@ issn = {2218-6581},
 doi = {10.3390/robotics12030077}
 }
 ```
-This work has been published in **MDPI Robotics.** The open-access publication can be found on [MDPI](https://doi.org/10.3390/robotics12030077).
+This work has been published in **MDPI Robotics.** The open-access publication can be found on [MDPI](https://doi.org/10.3390/robotics12030577).
