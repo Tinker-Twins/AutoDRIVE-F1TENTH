@@ -2,8 +2,9 @@
 
 ### [Scaled Autonomous Vehicles @ CU-ICAR](https://github.com/Tinker-Twins/Scaled-Autonomous-Vehicles) (Fall 2023)
 
-| <img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH/blob/main/Media/Summer%202023/Racecar.jpg" width="333"> | <img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH/blob/main/Media/Summer%202023/Award%20Ceremony.JPG" width="333"> | <img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH/blob/main/Media/Summer%202023/Certificates.JPG" width="333"> |
+| <img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH/blob/main/Media/Spring%202023/Vehicle%20with%20Mocap%20Markers.JPG" width="333"> | <img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH/blob/main/Media/Spring%202023/Teleoperation%20in%20Mocap%20Area.png" width="333"> | <img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH/blob/main/Media/Spring%202023/Open%20Loop%20Control%20in%20Mocap%20Area%201.JPG" width="333"> |
 | :-----------------: | :-----------------: | :-----------------: |
+| <img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH/blob/main/Media/Spring%202023/Open%20Loop%20Control%20in%20Mocap%20Area%202.png" width="333"> | <img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH/blob/main/Media/Spring%202023/Open%20Loop%20Control%20in%20Mocap%20Area%203.JPG" width="333"> | <img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH/blob/main/Media/Spring%202023/Open%20Loop%20Control%20in%20Mocap%20Area%204.png" width="333"> |
 
 ### [F1TENTH IV2023 Championship - 2nd Place Winner](https://iv2023-race.f1tenth.org) (Summer 2023)
 
