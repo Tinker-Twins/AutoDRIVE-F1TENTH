@@ -1,5 +1,10 @@
 # AutoDRIVE-F1TENTH
 
+### [Scaled Autonomous Vehicles @ CU-ICAR](https://github.com/Tinker-Twins/Scaled-Autonomous-Vehicles) (Fall 2023)
+
+| <img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH/blob/main/Media/Summer%202023/Racecar.jpg" width="333"> | <img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH/blob/main/Media/Summer%202023/Award%20Ceremony.JPG" width="333"> | <img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH/blob/main/Media/Summer%202023/Certificates.JPG" width="333"> |
+| :-----------------: | :-----------------: | :-----------------: |
+
 ### [F1TENTH IV2023 Championship - 2nd Place Winner](https://iv2023-race.f1tenth.org) (Summer 2023)
 
 | <img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH/blob/main/Media/Summer%202023/Racecar.jpg" width="333"> | <img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH/blob/main/Media/Summer%202023/Award%20Ceremony.JPG" width="333"> | <img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH/blob/main/Media/Summer%202023/Certificates.JPG" width="333"> |
