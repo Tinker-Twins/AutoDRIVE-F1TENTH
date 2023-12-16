@@ -4,7 +4,7 @@
 
 | <img src="https://github.com/Tinker-Twins/Scaled-Autonomous-Vehicles/blob/main/Project%20Media/AutoDRIVE-F1TENTH-PortoTrack-Simulator/Replay-F1TENTH.gif" width="333"> | <img src="https://github.com/Tinker-Twins/Scaled-Autonomous-Vehicles/blob/main/Project%20Media/AutoDRIVE-F1TENTH-PortoTrack-Simulator/Map-Autoware.gif" width="333"> | <img src="https://github.com/Tinker-Twins/Scaled-Autonomous-Vehicles/blob/main/Project%20Media/AutoDRIVE-F1TENTH-PortoTrack-Simulator/Replay-Autoware.gif" width="333"> |
 | :-----------------: | :-----------------: | :-----------------: |
-| <img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH/blob/main/Media/Spring%202023/Open%20Loop%20Control%20in%20Mocap%20Area%202.png" width="333"> | <img src="https://github.com/Tinker-Twins/Scaled-Autonomous-Vehicles/blob/main/Project%20Media/AutoDRIVE-F1TENTH-ARMLab-Testbed/Map-Autoware.gif" width="333"> | <img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH/blob/main/Media/Spring%202023/Open%20Loop%20Control%20in%20Mocap%20Area%204.png" width="333"> |
+| <img src="https://github.com/Tinker-Twins/Scaled-Autonomous-Vehicles/blob/main/Project%20Media/AutoDRIVE-F1TENTH-ARMLab-Testbed/Replay-F1TENTH.gif" width="333"> | <img src="https://github.com/Tinker-Twins/Scaled-Autonomous-Vehicles/blob/main/Project%20Media/AutoDRIVE-F1TENTH-ARMLab-Testbed/Map-Autoware.gif" width="333"> | <img src="https://github.com/Tinker-Twins/Scaled-Autonomous-Vehicles/blob/main/Project%20Media/AutoDRIVE-F1TENTH-ARMLab-Testbed/Replay-Autoware.gif" width="333"> |
 
 ### [F1TENTH IV2023 Championship - 2nd Place Winner](https://iv2023-race.f1tenth.org) (Summer 2023)
 
