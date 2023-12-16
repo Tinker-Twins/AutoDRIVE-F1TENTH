@@ -2,7 +2,7 @@
 
 ### [Scaled Autonomous Vehicles @ CU-ICAR](https://github.com/Tinker-Twins/Scaled-Autonomous-Vehicles) (Fall 2023)
 
-| <img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH/blob/main/Media/Spring%202023/Vehicle%20with%20Mocap%20Markers.JPG" width="333"> | <img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH/blob/main/Media/Spring%202023/Teleoperation%20in%20Mocap%20Area.png" width="333"> | <img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH/blob/main/Media/Spring%202023/Open%20Loop%20Control%20in%20Mocap%20Area%201.JPG" width="333"> |
+| <img src="https://github.com/Tinker-Twins/Scaled-Autonomous-Vehicles/blob/main/Project%20Media/AutoDRIVE-F1TENTH-PortoTrack-Simulator/Replay-F1TENTH.gif" width="333"> | <img src="https://github.com/Tinker-Twins/Scaled-Autonomous-Vehicles/blob/main/Project%20Media/AutoDRIVE-F1TENTH-PortoTrack-Simulator/Map-Autoware.gif" width="333"> | <img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH/blob/main/Media/Spring%202023/Open%20Loop%20Control%20in%20Mocap%20Area%201.JPG" width="333"> |
 | :-----------------: | :-----------------: | :-----------------: |
 | <img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH/blob/main/Media/Spring%202023/Open%20Loop%20Control%20in%20Mocap%20Area%202.png" width="333"> | <img src="https://github.com/Tinker-Twins/Scaled-Autonomous-Vehicles/blob/main/Project%20Media/AutoDRIVE-F1TENTH-ARMLab-Testbed/Map-Autoware.gif" width="333"> | <img src="https://github.com/Tinker-Twins/AutoDRIVE-F1TENTH/blob/main/Media/Spring%202023/Open%20Loop%20Control%20in%20Mocap%20Area%204.png" width="333"> |
 
